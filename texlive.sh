@@ -16,13 +16,12 @@ then
 
     /usr/local/texlive/2016/bin/x86_64-linux/tlmgr path add
     /usr/local/texlive/2016/bin/x86_64-linux/tlmgr install graphics-def
+
     /usr/local/texlive/2016/bin/x86_64-linux/tlmgr update --self
 
-    echo TexLive Installation Complete.
-fi
 
-if [ -d /usr/local/texlive ]
-then
     echo Updating TexLive.
     /usr/local/texlive/2016/bin/x86_64-linux/tlmgr update --all
+
+    echo TexLive Installation Complete.
 fi

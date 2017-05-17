@@ -90,7 +90,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "git.sh"
 
   # Download and Install Docker
-  config.vm.provision "shell", path: "docker.sh", privileged: false
+  # config.vm.provision "shell", path: "docker.sh", privileged: false
 
   # Download, Compile and Install Emacs
   config.vm.provision "shell", path: "emacs.sh", privileged: false
@@ -115,6 +115,10 @@ Vagrant.configure("2") do |config|
 
   # Download and Install the Atom editor
   config.vm.provision "shell", path: "atom.sh", privileged: false
+
+  # Download and Install the latest stable version of the Eclipse IDE
+  config.vm.provision "shell", path: "eclipse.sh", privileged: false
+
 
   config.vm.provision "shell", inline: <<-SHELL
       systemctl set-default graphical.target
