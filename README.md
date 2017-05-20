@@ -1,5 +1,23 @@
 # Vagrant Configured Development Virtual Machine
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [Vagrant Configured Development Virtual Machine](#vagrant-configured-development-virtual-machine)
+    - [Overview](#overview)
+    - [Dependencies](#dependencies)
+    - [Installation](#installation)
+    - [Using the VM](#using-the-vm)
+        - [Shared Folders](#shared-folders)
+        - [VM Login Details](#vm-login-details)
+    - [Post Installation Configuration](#post-installation-configuration)
+        - [Copy/Paste](#copypaste)
+        - [General Desktop Configurations](#general-desktop-configurations)
+        - [Atom Editor](#atom-editor)
+- [PlantUML example](#plantuml-example)
+
+<!-- markdown-toc end -->
+
 ## Overview
 
 This Vagrant script will install a full development environment.
@@ -28,7 +46,7 @@ The following dependencies are required. But will most likely require Administra
 
 ## Using the VM
 
-Enter `vagrant up` at the command-lone to start the VM.
+Enter `vagrant up` at the command-line to start the VM.
 
 ### Shared Folders
 The vagrant virtual machine is configured to share files and folders between the *Host* system, and the *Guest* system. Documents, configurations, and code must be saved within these shared folders and not in the file-system of the *Guest* OS because these will be lost if the virtual machine is deleted.
@@ -74,6 +92,16 @@ The Atom editor is set up for editing in Markdown and PlantUML.  To edit in Rest
 2. To enable real-time PlantUML preview;
    *Packages->PlantUML Preview->Toggle*
 
+3. The following Atom packages are installed.
+
+    ````
+    apm install language-plantuml
+    apm install plantuml-preview
+    apm install language-gfm-enhanced
+    apm install markdown-preview-enhanced
+    apm install language-restructuredtext
+    apm install rst-preview-pandoc
+    ````
 
 # PlantUML example
 
