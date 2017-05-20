@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
     vb.gui = true
  
     # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    vb.memory = "4096"
     vb.cpus = 1
 
     vb.name = "CentOS 7 Development VM"
@@ -77,10 +77,6 @@ Vagrant.configure("2") do |config|
        mkdir ~/.vagrant-installation
     fi
   SHELL
-
-  # if VAGRANT_COMMAND == "dot-emacs"
-  #   config.ssh.username = 'vagrant'
-  # end
 
   # Update all packages and install a base set of dependencies,
   # Gnome, Development Tools, etc.
@@ -125,19 +121,3 @@ Vagrant.configure("2") do |config|
   SHELL
 
 end
-
-# config.vm.define "" do |web|
-#   web.vm.provision "shell", inline: "echo bar"
-# end
-
-# config.vm.provision "shell", inline: "echo baz"
-#   end
-
-
-#   Vagrant.configure("2") do |config|
-#     if VAGRANT_COMMAND == "ssh"
-#       config.ssh.username = 'vagrant'
-#     end
-
-#     ...
-#   end

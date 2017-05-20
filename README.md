@@ -6,7 +6,7 @@ This Vagrant script will install a full development environment.
 
 ## Dependencies
 
-The following dependencies are requireed. But will most likely require Administration privileges to install.
+The following dependencies are required. But will most likely require Administration privileges to install.
 
 1. VirtualBox (https://www.virtualbox.org)
 
@@ -46,7 +46,7 @@ Password: `vagrant`
 
 To enable copy/paste between *Host* and *Guest* OS, go to the VirtualBox menu for the VM and enable copy/paste as follows;
 
-Devices->Shared Clipboard->Bidirectional
+*Devices->Shared Clipboard->Bidirectional*
 
 ### General Desktop Configurations
 
@@ -67,7 +67,7 @@ The Atom editor is set up for editing in Markdown and PlantUML.  To edit in Rest
    *Edit->Preferences->Packages->plantuml-preview->Settings*
 
    `Graphvis Dot Executable`: `/usr/bin/dot`
-   `Additional PlantUML Arguments`: `-Djava.awt.headless=true"` 
+   `Additional PlantUML Arguments`: `-Djava.awt.headless=true"`
    `PlantUML Jar`: `/home/vagrant/.vagrant-installation/plantuml/plantuml.jar`
    `Java Executable`: `/usr/bin/java`
 
