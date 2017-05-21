@@ -75,6 +75,7 @@ Vagrant.configure("2") do |config|
     then
        echo Creating the ~/.vagrant-installation directory
        mkdir ~/.vagrant-installation
+       mkdir ~/bin
     fi
   SHELL
 
@@ -109,8 +110,15 @@ Vagrant.configure("2") do |config|
   # Download and Install the Sphinx Documentation Generator 
   config.vm.provision "shell", path: "sphinx.sh"
 
+  # Download and Install the Sphinx Documentation Generator 
+  config.vm.provision "shell", path: "pandoc.sh"
+
   # Download and Install the Atom editor
   config.vm.provision "shell", path: "atom.sh", privileged: false
+
+  #Download and Install Clojure and Leiningen
+  # https://leiningen.org/
+  config.vm.provision "shell", path: "lein.sh", privileged: false
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
