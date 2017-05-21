@@ -1,6 +1,13 @@
 echo Updating packages
-yum -y makecache fast
-yum -y install deltarpm
+
+# yum -y makecache fast
+yum -y makecache
+
+if ! rpm -q deltarpm;  
+   then
+       yum -y install deltarpm
+fi
+
 yum -y update
 
 if [  ! -d /home/vagrant/.vagrant-installation/dev ]

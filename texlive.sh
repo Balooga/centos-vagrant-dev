@@ -11,7 +11,7 @@ then
 
     cd /home/vagrant/
     umount /mnt
-    rm /home/vagrant/exlive.iso
+    rm /home/vagrant/texlive.iso
     rm /home/vagrant/texlive.profile
 
     /usr/local/texlive/2016/bin/x86_64-linux/tlmgr path add
