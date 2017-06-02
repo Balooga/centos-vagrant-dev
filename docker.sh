@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d /home/vagrant/.vagrant-installation/docker ]
 then
     echo Downloading and Installing Docker
