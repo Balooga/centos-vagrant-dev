@@ -1,3 +1,4 @@
+#!/bin/bash
 if [  ! -d /home/vagrant/.vagrant-installation/pandoc ]
 then
     echo Installing Pandoc
