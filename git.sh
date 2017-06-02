@@ -1,3 +1,4 @@
+#!/bin/bash
 if [  ! -d /home/vagrant/.vagrant-installation/git ]
 then
     echo Installing the latest version of Git
