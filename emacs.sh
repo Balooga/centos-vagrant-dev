@@ -1,3 +1,4 @@
+#!/bin/bash
 if ! hash emacs 2>/dev/null;
 then
     echo Emacs not found in the current $PATH
