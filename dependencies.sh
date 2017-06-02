@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Updating packages
 
 # yum -y makecache fast
