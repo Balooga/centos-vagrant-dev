@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d /usr/local/texlive ]
 then
     echo Downloading TexLive.
