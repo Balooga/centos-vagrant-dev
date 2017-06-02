@@ -1,3 +1,4 @@
+#!/bin/bash
 # if [ ! -d ~/.spacemacs.d/ ]
 # if [ ! -d ~/.vagrant-installation/dot-emacs/ ]
 # then
