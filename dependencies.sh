@@ -24,6 +24,8 @@ then
     echo Installing GNOME Desktop
     mkdir /home/vagrant/.vagrant-installation/gnome
     yum -y groupinstall "GNOME Desktop"
+
+    yum -y remove tracker
 fi
 
 if [  ! -d /home/vagrant/.vagrant-installation/deps ]

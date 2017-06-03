@@ -40,8 +40,8 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant"
-
+  config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+  config.vm.synced_folder ".", "/home/vagrant/sync", type: "virtualbox"
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
@@ -119,6 +119,12 @@ Vagrant.configure("2") do |config|
   #Download and Install Clojure and Leiningen
   # https://leiningen.org/
   config.vm.provision "shell", path: "lein.sh", privileged: false
+
+  #Disable "Tracker" as it sucks down too much CPU
+  #config.vm.provision "shell", path: "tracker.sh", privileged: false
+
+  #Disable "Tracker" as it sucks down too much CPU
+  config.vm.provision "shell", path: "stumpwm.sh", privileged: false
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
