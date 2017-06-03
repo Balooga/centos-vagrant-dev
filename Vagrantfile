@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   if Vagrant::Util::Platform.windows? then
-    config.vm.synced_folder "..\", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+    config.vm.synced_folder "..\\", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
   else
     config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
   end
