@@ -24,11 +24,14 @@ then
     # cd stumpwm-1.0.0
     cd stumpwm
     ln -s ~/.vagrant-installation/stumpwm-contrib ~/.vagrant-installation/stumpwm/contrib 
+
+
     curl -O https://beta.quicklisp.org/quicklisp.lisp
+
     # sbcl --load quicklisp.lisp
     # (quicklisp-quickstart:install)
-    #  (ql:add-to-init-file)
-    #  (ql:quickload "clx")
+    # (ql:add-to-init-file)
+    # (ql:quickload "clx")
     # (ql:quickload "cl-ppcre")
     # (ql:quickload "alexandria")
 
