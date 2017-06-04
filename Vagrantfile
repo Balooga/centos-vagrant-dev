@@ -14,7 +14,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "minimal/centos7"
-  config.vm.box = "centos/7"
+  #config.vm.box = "centos/7"
+  config.vm.box = "bento/centos-7.2"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -40,8 +41,15 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
-  config.vm.synced_folder ".", "/home/vagrant/sync", type: "virtualbox"
+
+  if Vagrant::Util::Platform.windows? then
+    config.vm.synced_folder "..\\", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+  else
+    config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+  end
+
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:

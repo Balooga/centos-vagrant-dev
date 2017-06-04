@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d ~/.vagrant-installation/languagetool/ ]
 then
     echo Installing languagetool...

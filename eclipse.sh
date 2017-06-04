@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d /home/vagrant/.vagrant-installation/eclipse ]
 then
     echo Installing Eclipse.

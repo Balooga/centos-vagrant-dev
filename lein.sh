@@ -1,3 +1,4 @@
+#!/bin/bash
 if [  ! -d /home/vagrant/.vagrant-installation/lein ]
 then
     echo Installing Leiningen - https://leiningen.org.

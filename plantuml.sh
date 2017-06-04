@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d ~/.vagrant-installation/plantuml/ ]
 then
     mkdir ~/.vagrant-installation/plantuml
