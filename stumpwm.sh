@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -d ~/.vagrant-installation/sbcl ]
 then
     echo Installing SBCL.

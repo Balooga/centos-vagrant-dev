@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ ! -f ~/.config/autostart/trackerd.desktop ]
 then
     echo Disabling Tracker
