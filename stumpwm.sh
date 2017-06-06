@@ -35,6 +35,7 @@ then
     # (ql:quickload "clx")
     # (ql:quickload "cl-ppcre")
     # (ql:quickload "alexandria")
+    # (quit)
 
     # autoconf
     # ./configure
