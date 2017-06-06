@@ -26,9 +26,8 @@ then
     /usr/local/texlive/2017/bin/x86_64-linux/tlmgr path add
     /usr/local/texlive/2017/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install graphics-def
 
-    /usr/local/texlive/2017/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet update --self
-
     echo Updating TexLive.
+    /usr/local/texlive/2017/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet update --self
     /usr/local/texlive/2017/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet update --all
 
     echo Install Sphinx-Doc style dependencies
@@ -49,10 +48,8 @@ then
 
     /usr/local/texlive/2017/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install epstopdf
 
-    tee -a /home/vagrant/.bash_profile <<EOF
-PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
-export PATH
-EOF
+    echo 'PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux' >> /home/vagrant/.bash_profile
+    echo export PATH >> /home/vagrant/.bash_profile
 
     echo TexLive Installation Complete.
 fi

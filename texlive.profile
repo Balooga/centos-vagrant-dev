@@ -1,4 +1,4 @@
-if [ ! -d /usr/local/texlive ]
+if [ ! -d /usr/local/texlive/2017 ]
   then
     cat <<_EOF_ > texlive.profile
       # texlive.profile written on Tue Jun  6 05:56:53 2017 UTC
