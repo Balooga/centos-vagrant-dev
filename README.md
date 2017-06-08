@@ -31,6 +31,7 @@ The following dependencies are required. But will most likely require Administra
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
+   - Following installation of Vagrant, at the command-prompt, execute the following; `vagrant plugin install vagrant-vbguest`
 
 ## Installation
 
