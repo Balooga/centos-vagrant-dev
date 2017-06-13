@@ -119,7 +119,7 @@ configured.
 
   ```bash
   git config --global user.name "First Last"
-  git config --global user.email "flast@vubiquity.com"
+  git config --global user.email "flast@company-name.com"
   ```
 
 # PlantUML example
