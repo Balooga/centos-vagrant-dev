@@ -66,6 +66,25 @@ The shared folder is located in `~/Documents` (`/home/vagrant/Documents`).
 Login: `vagrant`
 Password: `vagrant`
 
+## Vagrant Installed Packages
+
+Vagrant automatically installs the following packages as part of provisioning
+the VM.
+
+* PlantUML
+* Graphviz
+* Java
+* Maven
+* Atom editor
+* Emacs, with Spacemacs
+* Git
+* Docker
+* LangTool
+* TexLive
+* Spinx-docker
+* Pandoc
+* Python
+
 ## Post Installation Configuration
 
 ### Copy/Paste
