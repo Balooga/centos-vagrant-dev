@@ -120,6 +120,7 @@ configured.
   ```bash
   git config --global user.name "First Last"
   git config --global user.email "flast@company-name.com"
+  git config --global core.autocrlf true
   ```
 
 # PlantUML example
