@@ -24,14 +24,16 @@ This Vagrant script will install a full development environment.
 
 ## Dependencies
 
-The following dependencies are required. But will most likely require Administration privileges to install.
+The following dependencies are required. But will most likely require
+Administration privileges to install.
 
 1. VirtualBox (https://www.virtualbox.org)
 
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
-   - Following installation of Vagrant, at the command-prompt, execute the following; `vagrant plugin install vagrant-vbguest`
+   - Following installation of Vagrant, at the command-prompt, execute the
+     following; `vagrant plugin install vagrant-vbguest`
 
 ## Installation
 
@@ -52,7 +54,10 @@ The following dependencies are required. But will most likely require Administra
 Enter `vagrant up` at the command-line to start the VM.
 
 ### Shared Folders
-The vagrant virtual machine is configured to share files and folders between the *Host* system, and the *Guest* system. Documents, configurations, and code must be saved within these shared folders and not in the file-system of the *Guest* OS because these will be lost if the virtual machine is deleted.
+The vagrant virtual machine is configured to share files and folders between the
+*Host* system and the *Guest* system. Documents, configurations, and code must
+be saved within these shared folders and not in the file-system of the *Guest*
+OS because these files *will* be lost if the virtual machine is deleted.
 
 The shared folder is located in `~/Documents` (`/home/vagrant/Documents`).
 
@@ -65,7 +70,8 @@ Password: `vagrant`
 
 ### Copy/Paste
 
-To enable copy/paste between *Host* and *Guest* OS, go to the VirtualBox menu for the VM and enable copy/paste as follows;
+To enable copy/paste between *Host* and *Guest* OS, go to the VirtualBox menu
+for the VM and enable copy/paste as follows;
 
 *Devices->Shared Clipboard->Bidirectional*
 
@@ -81,26 +87,13 @@ To enable copy/paste between *Host* and *Guest* OS, go to the VirtualBox menu fo
 
 ### Atom Editor
 
-The Atom editor is set up for editing in Markdown and PlantUML.  To edit in Restructured Text (RsT) however, the following packages will need to be configured.
+The Atom editor is set up for editing in Markdown and PlantUML. To edit in
+Restructured Text (RsT) however, the following packages will need to be
+configured.
 
-1. PlantUML; The following PlantUML plugins are installed for the Atom editor.  However you will need to specify the location of the `plantuml.jar` file.
+1. The following Atom packages are installed by default;
 
-   *Edit->Preferences->Packages->plantuml-preview->Settings*
-
-   `Graphvis Dot Executable`: `/usr/bin/dot`
-   
-   `Additional PlantUML Arguments`: `-Djava.awt.headless=true"`
-   
-   `PlantUML Jar`: `/home/vagrant/.vagrant-installation/plantuml/plantuml.jar`
-   
-   `Java Executable`: `/usr/bin/java`
-
-2. To enable real-time PlantUML preview;
-   *Packages->PlantUML Preview->Toggle*
-
-3. The following Atom packages are installed.
-
-    ````
+    ````bash
     apm install language-plantuml
     apm install plantuml-preview
     apm install language-gfm-enhanced
@@ -108,6 +101,19 @@ The Atom editor is set up for editing in Markdown and PlantUML.  To edit in Rest
     apm install language-restructuredtext
     apm install rst-preview-pandoc
     ````
+
+2. To enable real-time PlantUML preview;
+   *Packages->PlantUML Preview->Toggle*
+
+3. PlantUML; The following must be configured in Atom in order to use the
+   `plantuml-preview` package.
+   *Edit->Preferences->Packages->plantuml-preview->Settings*
+  ````
+   Graphvis Dot Executable: /usr/bin/dot
+   Additional PlantUML Arguments: -Djava.awt.headless=true
+   PlantUML Jar: /home/vagrant/.vagrant-installation/plantuml/plantuml.jar
+   Java Executable: /usr/bin/java
+  ```` 
 
 # PlantUML example
 
