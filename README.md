@@ -39,7 +39,7 @@ Administration privileges to install.
 
 1. Ensure that the dependencies listed in the previous section are installed.
 
-2. Clone this repository: `git clone http://lcrook@usla-gitl-d001.dev.vubiquity.com/lcrook/vagrant-centos-7-vm.git`
+2. Git clone this repository
 
 3. `cd vagrant-centos-7-vm`
 
