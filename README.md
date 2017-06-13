@@ -37,13 +37,15 @@ The following dependencies are required. But will most likely require Administra
 
 1. Ensure that the dependencies listed in the previous section are installed.
 
-2. Clone the vagrant development repository located here (TBD)
+2. Clone this repository: `git clone http://lcrook@usla-gitl-d001.dev.vubiquity.com/lcrook/vagrant-centos-7-vm.git`
 
-3. Enter `vagrant up` at the command-line in the cloned vagrant directory
+3. `cd vagrant-centos-7-vm`
 
-4. Come back in a couple of hours.
+4. Enter `vagrant up` at the command-line in the vagrant-centos-7-vm directory
 
-5. Complete the CentOS 7 setup (Choose language, etc.)
+5. Come back in a couple of hours.
+
+6. Complete the CentOS 7 setup (Choose language, etc.)
 
 ## Using the VM
 
@@ -86,8 +88,11 @@ The Atom editor is set up for editing in Markdown and PlantUML.  To edit in Rest
    *Edit->Preferences->Packages->plantuml-preview->Settings*
 
    `Graphvis Dot Executable`: `/usr/bin/dot`
+   
    `Additional PlantUML Arguments`: `-Djava.awt.headless=true"`
+   
    `PlantUML Jar`: `/home/vagrant/.vagrant-installation/plantuml/plantuml.jar`
+   
    `Java Executable`: `/usr/bin/java`
 
 2. To enable real-time PlantUML preview;
