@@ -93,14 +93,14 @@ configured.
 
 1. The following Atom packages are installed by default;
 
-    ````bash
+    ```bash
     apm install language-plantuml
     apm install plantuml-preview
     apm install language-gfm-enhanced
     apm install markdown-preview-enhanced
     apm install language-restructuredtext
     apm install rst-preview-pandoc
-    ````
+    ```
 
 2. To enable real-time PlantUML preview;
    *Packages->PlantUML Preview->Toggle*
@@ -108,17 +108,24 @@ configured.
 3. PlantUML; The following must be configured in Atom in order to use the
    `plantuml-preview` package.
    *Edit->Preferences->Packages->plantuml-preview->Settings*
-  ````
+  ```
    Graphvis Dot Executable: /usr/bin/dot
    Additional PlantUML Arguments: -Djava.awt.headless=true
    PlantUML Jar: /home/vagrant/.vagrant-installation/plantuml/plantuml.jar
    Java Executable: /usr/bin/java
-  ```` 
+  ``` 
+
+### Configuring Git
+
+  ```bash
+  git config --global user.name "First Last"
+  git config --global user.email "flast@vubiquity.com"
+  ```
 
 # PlantUML example
 
-````@plantuml
+```@plantuml
 System_A -> System_B
 System_B --> System_B
 System_A <- System_B
-````
+```
