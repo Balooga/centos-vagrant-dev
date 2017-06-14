@@ -146,8 +146,14 @@ configured.
 
 # PlantUML example
 
-```@plantuml
+```plantuml
 System_A -> System_B
 System_B --> System_B
 System_A <- System_B
 ```
+
+```plantuml
+Bob -> Alice : hello
+Alice -> Bob : Go Away
+```
+
