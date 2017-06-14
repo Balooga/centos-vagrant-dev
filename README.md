@@ -30,7 +30,9 @@ The following dependencies are required. But will most likely require
 Administration privileges to install.
 
 1. VirtualBox (https://www.virtualbox.org)
-
+   - VirtualBox Guest Additions must also be installed to enable desktop scaling
+     and 2D graphics acceleration.
+     
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
