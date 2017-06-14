@@ -119,7 +119,7 @@ The Atom editor is set up for editing in Markdown and PlantUML. To edit in
 Restructured Text (RsT) however, the following packages will need to be
 configured.
 
-1. The following Atom packages are installed by default;
+1. The following Atom packages are installed by this Vagrant script;
 
     ```bash
     apm install language-plantuml
@@ -130,10 +130,10 @@ configured.
     apm install rst-preview-pandoc
     ```
 
-2. To enable real-time PlantUML preview;
+2. To enable real-time PlantUML preview in Atom;
    *Packages->PlantUML Preview->Toggle*
 
-3. PlantUML; The following must be configured in Atom in order to use the
+3. The following must be configured in Atom in order to use the
    `plantuml-preview` package.
    *Edit->Preferences->Packages->plantuml-preview->Settings*
   ```
