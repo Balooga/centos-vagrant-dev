@@ -63,7 +63,12 @@ The vagrant virtual machine is configured to share files and folders between the
 be saved within these shared folders and not in the file-system of the *Guest*
 OS because these files *will* be lost if the virtual machine is deleted.
 
-The shared folder is located in `~/Documents` (`/home/vagrant/Documents`).
+The shared folder is located in the *Guest* system at this location:
+`~/Documents` (`/home/vagrant/Documents`).
+
+It is assumed that the `vagrant up` command is executed in the
+`\Users\<user_name>\vagrant-centos-7-vm` directory, as the shared folder is
+mapped to `\Users\<user_name>\Documents`.
 
 ### VM Login Details
 
