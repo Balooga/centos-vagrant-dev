@@ -115,9 +115,7 @@ for the VM and enable copy/paste as follows;
 
 ### Atom Editor
 
-The Atom editor is set up for editing in Markdown and PlantUML. To edit in
-Restructured Text (RsT) however, the following packages will need to be
-configured.
+Vagrant will configure the Atom editor for editing in Markdown and PlantUML.
 
 1. The following Atom packages are installed by this Vagrant script;
 
