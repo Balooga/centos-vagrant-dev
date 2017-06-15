@@ -134,6 +134,9 @@ Vagrant.configure("2") do |config|
   #Disable "Tracker" as it sucks down too much CPU
   config.vm.provision "shell", path: "stumpwm.sh", privileged: false
 
+  #Disable "Tracker" as it sucks down too much CPU
+  config.vm.provision "shell", path: "cmatrix.sh", privileged: false
+
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
 
