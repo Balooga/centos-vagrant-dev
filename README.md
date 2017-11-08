@@ -26,18 +26,19 @@ This Vagrant script will install a full development environment.
 
 ## Dependencies
 
-The following dependencies are required. But will most likely require
+The following dependencies are required and will most likely require
 Administration privileges to install.
 
 1. VirtualBox (https://www.virtualbox.org)
-   - VirtualBox Guest Additions must also be installed to enable desktop scaling
-     and 2D graphics acceleration.
+
+2. VirtualBox Guest Additions 
      
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
-   - Following installation of Vagrant, at the command-prompt, execute the
-     following; `vagrant plugin install vagrant-vbguest`
+
+4. Following installation of Vagrant, at the command-prompt, execute the
+   following; `vagrant plugin install vagrant-vbguest`
 
 ## Installation
 
@@ -66,19 +67,19 @@ OS because these files *will* be lost if the virtual machine is deleted.
 The shared folder is located in the *Guest* system at this location:
 `~/Documents` (`/home/vagrant/Documents`).
 
-It is assumed that the `vagrant up` command is executed in the
-`\Users\<user_name>\vagrant-centos-7-vm` directory, as the shared folder is
-mapped to `\Users\<user_name>\Documents`.
+It is assumed that the `vagrant up` command is executed in a directly under
+`\Users\<user_name>\` for example `\Users\<user_name>\<vagrant-centos-7-vm>`
+directory, as the shared folder is mapped to `\Users\<user_name>\Documents`.
+
+In the VM, the *Host* folders are accessible from `~/Documents/Documents`.
 
 ### VM Login Details
 
-Login: `vagrant`
-Password: `vagrant`
+Login to the VM as using `vagrant` as both user and password.
 
 ## Vagrant Installed Packages
 
-Vagrant automatically installs the following packages as part of provisioning
-the VM.
+Vagrant will install the following packages as part of provisioning the VM.
 
 * PlantUML
 * Graphviz
@@ -98,26 +99,26 @@ the VM.
 
 ### Copy/Paste
 
-To enable copy/paste between *Host* and *Guest* OS, go to the VirtualBox menu
-for the VM and enable copy/paste as follows;
+To enable copy/paste between *Host* and *Guest* OS, navigate to the VirtualBox
+menu for the VM and enable copy/paste as follows;
 
 *Devices->Shared Clipboard->Bidirectional*
 
 ### General Desktop Configurations
 
-1. Change the defaults for the lock screen.
+1. Change lock screen defaults
    * *Applications->System Tools->Settings->Privacy->Lock Screen->Off*
-2. Change the Timezone
+2. Change Timezone
    * *Applications->System Tools->Settings->Date & Time->Automatic Time Zone->Off*
    * *Applications->System Tools->Settings->Date & Time->Time Zone->PDT*
-3. Modify the blank screen timeout
+3. Change screensaver defaults
    * *Applications->System Tools->Settings->Power->Blank Screen->Never*
 
 ### Atom Editor
 
-Vagrant will configure the Atom editor for editing in Markdown and PlantUML.
+Vagrant will add support fr Markdown and PlantUML to the Atom editor.
 
-1. The following Atom packages are installed by this Vagrant script;
+1. The following Atom packages are installed;
 
     ```bash
     apm install language-plantuml
@@ -128,13 +129,15 @@ Vagrant will configure the Atom editor for editing in Markdown and PlantUML.
     apm install rst-preview-pandoc
     ```
 
-2. To enable real-time PlantUML preview in Atom;
-   *Packages->PlantUML Preview->Toggle*
+2. To enable real-time PlantUML preview in Atom; *Packages->PlantUML
+   Preview->Toggle*
 
-3. The following must be configured in Atom in order to use the
-   `plantuml-preview` package.
+3. The following must be set in Atom in order to use the `plantuml-preview`
+   package.
+   
    *Edit->Preferences->Packages->plantuml-preview->Settings*
-  ```
+ 
+ ```
    Graphvis Dot Executable: /usr/bin/dot
    Additional PlantUML Arguments: -Djava.awt.headless=true
    PlantUML Jar: /home/vagrant/.vagrant-installation/plantuml/plantuml.jar
@@ -142,6 +145,8 @@ Vagrant will configure the Atom editor for editing in Markdown and PlantUML.
   ``` 
 
 ### Configuring Git
+
+Enter the following at the command-line;
 
   ```bash
   git config --global user.name "First Last"
