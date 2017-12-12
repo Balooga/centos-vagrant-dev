@@ -1,8 +1,9 @@
 #!/bin/bash
-if [ ! -d /home/vagrant/.vagrant-installation/eclipse ]
+if [ ! -f /home/vagrant/.vagrant-installation/eclipse ]
 then
     echo Installing Eclipse.
-    mkdir /home/vagrant/.vagrant-installation/eclipse
+#    mkdir /home/vagrant/.vagrant-installation/eclipse
+    touch /home/vagrant/.vagrant-installation/eclipse
 
     # https://www.softwarecollections.org/en/scls/rhscl/rh-eclipse46/
     # 1. Install a package with repository for your system:

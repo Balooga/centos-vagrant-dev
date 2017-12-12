@@ -1,8 +1,9 @@
 #!/bin/bash
-if [  ! -d /home/vagrant/.vagrant-installation/sphinx ]
+if [  ! -f /home/vagrant/.vagrant-installation/sphinx ]
 then
     echo Installing Sphinx-doc
-    mkdir /home/vagrant/.vagrant-installation/sphinx
+#    mkdir /home/vagrant/.vagrant-installation/sphinx
+    touch /home/vagrant/.vagrant-installation/sphinx
     
     sudo yum -y install python-pip
     pip install --upgrade pip

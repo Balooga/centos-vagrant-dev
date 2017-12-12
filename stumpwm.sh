@@ -1,8 +1,9 @@
 #!/bin/bash
-if [ ! -d ~/.vagrant-installation/sbcl ]
+if [ ! -f ~/.vagrant-installation/sbcl ]
 then
     echo Installing SBCL.
-    mkdir ~/.vagrant-installation/sbcl
+#    mkdir ~/.vagrant-installation/sbcl
+    touch ~/.vagrant-installation/sbcl
 
     # cd /home/vagrant/.vagrant-installation/
     # wget -q -c --progress=dot:giga http://prdownloads.sourceforge.net/sbcl/sbcl-1.2.7-x86-linux-binary.tar.bz2
@@ -25,7 +26,6 @@ then
     # cd stumpwm-1.0.0
     cd stumpwm
     ln -s ~/.vagrant-installation/stumpwm-contrib ~/.vagrant-installation/stumpwm/contrib 
-
 
     curl -O https://beta.quicklisp.org/quicklisp.lisp
 

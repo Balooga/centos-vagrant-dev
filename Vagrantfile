@@ -112,13 +112,16 @@ Vagrant.configure("2") do |config|
   # Create the texlive.profile file to allow configuration of Texlive
   config.vm.provision "shell", path: "texlive.profile"
 
-  # Download and Install Texlive 2016
+  # Download and Install Reveal.js 
+  config.vm.provision "shell", path: "reveal.sh", privileged: false
+
+  # Download and Install Texlive 2017
   config.vm.provision "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator 
   config.vm.provision "shell", path: "sphinx.sh"
 
-  # Download and Install the Sphinx Documentation Generator 
+  # Download and Install the Pandoc Documentation Generator 
   config.vm.provision "shell", path: "pandoc.sh"
 
   # Download and Install the Atom editor
@@ -131,15 +134,12 @@ Vagrant.configure("2") do |config|
   #Disable "Tracker" as it sucks down too much CPU
   #config.vm.provision "shell", path: "tracker.sh", privileged: false
 
-  #Disable "Tracker" as it sucks down too much CPU
   config.vm.provision "shell", path: "stumpwm.sh", privileged: false
 
-  #Disable "Tracker" as it sucks down too much CPU
   config.vm.provision "shell", path: "cmatrix.sh", privileged: false
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
-
 
   config.vm.provision "shell", inline: <<-SHELL
       systemctl set-default graphical.target

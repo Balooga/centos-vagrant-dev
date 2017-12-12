@@ -1,8 +1,9 @@
 #!/bin/bash
-if [  ! -d /home/vagrant/.vagrant-installation/pandoc ]
+if [  ! -f /home/vagrant/.vagrant-installation/pandoc ]
 then
     echo Installing Pandoc
-    mkdir /home/vagrant/.vagrant-installation/pandoc
+#    mkdir /home/vagrant/.vagrant-installation/pandoc
+    touch /home/vagrant/.vagrant-installation/pandoc
     
     yum -y install pandoc
 

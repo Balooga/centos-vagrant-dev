@@ -113,6 +113,8 @@ menu for the VM and enable copy/paste as follows;
    * *Applications->System Tools->Settings->Date & Time->Time Zone->PDT*
 3. Change screensaver defaults
    * *Applications->System Tools->Settings->Power->Blank Screen->Never*
+4. Automatic Login
+   * Go to user settings, and enable "Automatic Login" for the `vagrant` user
 
 ### Atom Editor
 

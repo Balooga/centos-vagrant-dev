@@ -11,7 +11,7 @@ then
     fi
 
     cd ~/.vagrant-installation/emacs
-    git checkout emacs-25
+    git checkout emacs-26
     git pull
     sudo make install
     make clean
