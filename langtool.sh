@@ -8,6 +8,6 @@ then
     # mvn clean test
     ./build.sh languagetool-standalone package -DskipTests
 
-    ln -s /home/vagrant/.vagrant-installation/languagetool/languagetool-standalone/target/LanguageTool-3.8-SNAPSHOT/LanguageTool-3.8-SNAPSHOT/ /home/vagrant/.vagrant-installation/LanguageTool
+    ln -s /home/vagrant/.vagrant-installation/languagetool/languagetool-standalone/target/LanguageTool-4.0-SNAPSHOT/LanguageTool-4.0-SNAPSHOT/ /home/vagrant/.vagrant-installation/LanguageTool
 
 fi
