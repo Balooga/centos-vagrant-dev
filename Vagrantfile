@@ -110,7 +110,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "langtool.sh", privileged: false 
 
   # Create the texlive.profile file to allow configuration of Texlive
-  config.vm.provision "shell", path: "texlive.profile"
+  config.vm.provision "shell", path: "texlive.prof.sh"
 
   # Download and Install Reveal.js 
   config.vm.provision "shell", path: "reveal.sh", privileged: false
@@ -140,6 +140,9 @@ Vagrant.configure("2") do |config|
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
+  
+  # Install all C/C++ dependencies 
+  config.vm.provision "shell", path: "cplusplus.sh"
 
   config.vm.provision "shell", inline: <<-SHELL
       systemctl set-default graphical.target
