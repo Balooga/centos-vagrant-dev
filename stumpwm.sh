@@ -1,14 +1,8 @@
 #!/bin/bash
-if [ ! -f ~/.vagrant-installation/sbcl ]
+if [ ! -f ~/.vagrant-installation/sbcl.installed ]
 then
-    echo Installing SBCL.
-#    mkdir ~/.vagrant-installation/sbcl
-    touch ~/.vagrant-installation/sbcl
-
-    # cd /home/vagrant/.vagrant-installation/
-    # wget -q -c --progress=dot:giga http://prdownloads.sourceforge.net/sbcl/sbcl-1.2.7-x86-linux-binary.tar.bz2
-    # wget -q -c --progress=dot:giga http://prdownloads.sourceforge.net/sbcl/sbcl-1.3.17-source.tar.bz2
-    # tar xvjf sbcl-1.2.7-x86-linux-binary.tar.bz2 
+    echo Installing SBCL
+    touch ~/.vagrant-installation/sbcl.installed
     sudo yum -y install sbcl
 fi
 
@@ -16,8 +10,6 @@ if [ ! -d ~/.vagrant-installation/stumpwm ]
 then
     echo Installing StumpWM.
     cd ~/.vagrant-installation/
-
-    sudo yum -y install xterm
 
     git clone https://github.com/stumpwm/stumpwm.git
     git clone https://github.com/stumpwm/stumpwm-contrib.git
