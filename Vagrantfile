@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "minimal/centos7"
   #config.vm.box = "centos/7"
-  config.vm.box = "bento/centos-7.2"
+  config.vm.box = "bento/centos-7.4"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -102,6 +102,9 @@ Vagrant.configure("2") do |config|
 
   # Download and Install Spacemacs 
   config.vm.provision "shell", path: "spacemacs.sh", privileged: false
+
+  # Download and Install Dot-Emacs 
+  config.vm.provision "shell", path: "dot-emacs.sh", privileged: false
 
   # Download and Install PlantUML
   config.vm.provision "shell", path: "plantuml.sh", privileged: false

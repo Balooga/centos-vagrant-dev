@@ -19,6 +19,13 @@ then
     yum -y install linux-headers-$(uname -r) epel-release build-essential dkms epel-release
     yum -y groupinstall "Development Tools"
     yum -y install kernel-devel
+    yum -y install cmake
+    yum -y install clang
+    yum -y install valgrind
+    yum -y install the_silver_searcher
+    yum -y install libXScrnSaver # Required for Markdown viewer "vmd"
+    yum -y install nodejs
+    sudo npm install -g vmd
 fi
 
 if [  ! -f /home/vagrant/.vagrant-installation/gnome.installed ]

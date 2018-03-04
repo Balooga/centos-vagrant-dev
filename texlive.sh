@@ -2,7 +2,7 @@
 
 # To remove a previous installation
 # rm -rf /usr/local/texlive/2016
-# rm -rf ~/.texlive2017
+# rm -rf ~/.texlive2016
 
 if [ ! -d /usr/local/texlive/2017 ]
 then
