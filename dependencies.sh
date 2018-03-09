@@ -26,6 +26,7 @@ then
     yum -y install libXScrnSaver # Required for Markdown viewer "vmd"
     yum -y install nodejs
     sudo npm install -g vmd
+    sudo npm install -g tern
 fi
 
 if [  ! -f /home/vagrant/.vagrant-installation/gnome.installed ]
