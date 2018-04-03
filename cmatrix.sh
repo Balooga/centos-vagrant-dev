@@ -1,4 +1,4 @@
-if [ ! -d ~/.vagrant-installation/cmatrix ] 
+if [ ! -d ~/.vagrant-installation/cmatrix ]
 then
     echo Installing cMatrix
 	cd ~/.vagrant-installation/

@@ -7,6 +7,6 @@ fi
 
 if [ ! -d ~/.spacemacs.d/ ]
 then
-    echo Linking .spacemacs.d 
+    echo Linking .spacemacs.d
     ln -s ~/.vagrant-installation/dot-emacs/.spacemacs.d/ ~/.spacemacs.d
 fi
