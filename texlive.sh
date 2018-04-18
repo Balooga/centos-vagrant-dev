@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # To remove a previous installation
-# rm -rf /usr/local/texlive/2016
-# rm -rf ~/.texlive2016
+# $ rm -rf /usr/local/texlive/2016
+# $ rm -rf ~/.texlive2016
+# and remember to change the path in ~/.bash_profile
 
 if [ ! -d /usr/local/texlive/2017 ]
 then
