@@ -24,9 +24,13 @@ then
     rm /home/vagrant/texlive.profile
 
     /usr/local/texlive/2018/bin/x86_64-linux/tlmgr path add
-    /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install graphics-def
 
-    echo Install Sphinx-Doc style dependencies
+    echo Updating TexLive.
+    /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet update --self
+    /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet update --all
+
+    echo Install Sphinx-Doc style dependencies.
+    /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install graphics-def
     /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install tabulary
     /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install fncychap
     /usr/local/texlive/2018/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install framed
