@@ -5,6 +5,7 @@
 # New installations of texlive require a new texlive.profile
 # which is created following a successful install of texlive.
 # texlive.profile can be found in /usr/local/texlive/2018/tlpkg/texlive.profile
+# and remember to change the path in ~/.bash_profile
 
 if [ ! -d /usr/local/texlive/2018 ]
 then
