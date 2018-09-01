@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
- 
+
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
     vb.cpus = 1
@@ -94,6 +94,10 @@ Vagrant.configure("2") do |config|
   # Gnome, Development Tools, etc.
   config.vm.provision "shell", path: "dependencies.sh"
 
+  # config.vm.provision "shell", path: "gnome.sh"
+
+  config.vm.provision "shell", path: "x11.sh"
+
   # Install the latest version of Git
   config.vm.provision "shell", path: "git.sh"
 
@@ -103,31 +107,31 @@ Vagrant.configure("2") do |config|
   # Download, Compile and Install Emacs
   config.vm.provision "shell", path: "emacs.sh", privileged: false
 
-  # Download and Install Spacemacs 
+  # Download and Install Spacemacs
   config.vm.provision "shell", path: "spacemacs.sh", privileged: false
 
-  # Download and Install Dot-Emacs 
+  # Download and Install Dot-Emacs
   config.vm.provision "shell", path: "dot-emacs.sh", privileged: false
 
   # Download and Install PlantUML
   config.vm.provision "shell", path: "plantuml.sh", privileged: false
 
   # Download, Compile and Install LanguageTool
-  config.vm.provision "shell", path: "langtool.sh", privileged: false 
+  config.vm.provision "shell", path: "langtool.sh", privileged: false
 
   # Create the texlive.profile file to allow configuration of Texlive
   config.vm.provision "shell", path: "texlive.prof.sh"
 
-  # Download and Install Reveal.js 
+  # Download and Install Reveal.js
   config.vm.provision "shell", path: "reveal.sh", privileged: false
 
   # Download and Install Texlive 2017
-  config.vm.provision "shell", path: "texlive.sh"
+  # config.vm.provision "shell", path: "texlive.sh"
 
-  # Download and Install the Sphinx Documentation Generator 
+  # Download and Install the Sphinx Documentation Generator
   config.vm.provision "shell", path: "sphinx.sh"
 
-  # Download and Install the Pandoc Documentation Generator 
+  # Download and Install the Pandoc Documentation Generator
   config.vm.provision "shell", path: "pandoc.sh"
 
   # Download and Install the Atom editor
@@ -146,8 +150,8 @@ Vagrant.configure("2") do |config|
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
-  
-  # Install all C/C++ dependencies 
+
+  # Install all C/C++ dependencies
   config.vm.provision "shell", path: "cplusplus.sh"
 
   config.vm.provision "shell", inline: <<-SHELL

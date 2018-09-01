@@ -27,16 +27,6 @@ then
     yum -y install ack
 fi
 
-if [  ! -f /home/vagrant/.vagrant-installation/gnome.installed ]
-then
-    echo Installing GNOME Desktop
-#    mkdir /home/vagrant/.vagrant-installation/gnome
-    touch /home/vagrant/.vagrant-installation/gnome.installed
-    yum -y groupinstall "GNOME Desktop"
-
-    yum -y remove tracker
-fi
-
 if [  ! -f /home/vagrant/.vagrant-installation/deps.installed ]
 then
     echo Install various dependencies
