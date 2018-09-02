@@ -125,8 +125,8 @@ Vagrant.configure("2") do |config|
   # Download and Install Reveal.js
   config.vm.provision "shell", path: "reveal.sh", privileged: false
 
-  # Download and Install Texlive 2017
-  # config.vm.provision "shell", path: "texlive.sh"
+  # Download and Install Texlive
+  config.vm.provision "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator
   config.vm.provision "shell", path: "sphinx.sh"
