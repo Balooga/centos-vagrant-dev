@@ -98,6 +98,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", path: "x11.sh"
 
+  # config.vm.provision "shell", path: "mu4e.sh", privileged: false
+
   # Install the latest version of Git
   config.vm.provision "shell", path: "git.sh"
 
