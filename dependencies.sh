@@ -45,3 +45,12 @@ then
     yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm
     yum-builddep -y emacs
 fi
+
+if [  ! -f /home/vagrant/.vagrant-installation/X11.installed ]
+then
+    echo Installing X11 dependencies 
+    #    mkdir /home/vagrant/.vagrant-installation/X11
+    touch /home/vagrant/.vagrant-installation/x11.installed
+    yum -y install xorg-x11-xauth
+    yum -y install xorg-x11-apps.x86_64
+fi
