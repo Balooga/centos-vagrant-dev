@@ -17,5 +17,5 @@ then
     sudo make install
     cd ~/
 
-    echo cMatrix installation complete.
+    echo Matrix installation complete.
 fi
