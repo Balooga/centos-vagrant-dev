@@ -22,7 +22,7 @@
 
 ## Overview
 
-This Vagrant script will install a full development environment.
+This Vagrant script will install Emacs, Spacemacs, and various development environments on a Centos 7.4 Virtual Machine.
 
 ## Dependencies
 
@@ -52,8 +52,6 @@ Administration privileges to install.
 
 5. Come back in a couple of hours.
 
-6. Complete the CentOS 7 setup (Choose language, etc.)
-
 ## Using the VM
 
 Enter `vagrant up` at the command-line to start the VM.
@@ -71,7 +69,7 @@ It is assumed that the `vagrant up` command is executed in a directly under
 `\Users\<user_name>\` for example `\Users\<user_name>\<vagrant-centos-7-vm>`
 directory, as the shared folder is mapped to `\Users\<user_name>\Documents`.
 
-In the VM, the *Host* folders are accessible from `~/Documents/Documents`.
+When in the virtual machine, the *Host* folders are accessible from `~/Documents/Documents`.
 
 ### VM Login Details
 
@@ -94,13 +92,14 @@ Vagrant will install the following packages as part of provisioning the VM.
 * Spinx-docker
 * Pandoc
 * Python
+* GoLang
 
 ## Post Installation Configuration
 
 ### Copy/Paste
 
 To enable copy/paste between *Host* and *Guest* OS, navigate to the VirtualBox
-menu for the VM and enable copy/paste as follows;
+menu for the virtual machine and enable copy/paste as follows;
 
 *Devices->Shared Clipboard->Bidirectional*
 
@@ -118,7 +117,7 @@ menu for the VM and enable copy/paste as follows;
 
 ### Atom Editor
 
-Vagrant will add support fr Markdown and PlantUML to the Atom editor.
+The Vagrant installation script adds support for Markdown and PlantUML to the Atom editor.
 
 1. The following Atom packages are installed;
 
