@@ -10,6 +10,11 @@ then
     echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
     echo 'export GOPATH=~/go/bin' >> /home/vagrant/.bash_profile
     echo 'export PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
+
+    echo 'export PATH=$PATH:/usr/local/go/bin'
+    echo 'export GOPATH=~/go/bin'
+    echo 'export PATH=$PATH:$GOPATH'
+
     /usr/local/go/bin/go get -u -v github.com/nsf/gocode
     /usr/local/go/bin/go get -u -v github.com/rogpeppe/godef
     /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/guru
