@@ -23,4 +23,11 @@ then
     yum install -y xorg-x11-server-utils
     yum install -y xorg-x11-app*
     yum groupinstall -y "X Window System"
+
+    # ssh -X -p 2222 -i /path/to/ssh/keyfile vagrant@localhost xclock
+    # or
+    # vagrant ssh -- -X xclock
+    # or
+    # ssh -X -p 2222 vagrant@localhost xclock
+
 fi
