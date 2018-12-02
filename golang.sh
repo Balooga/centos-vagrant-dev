@@ -7,9 +7,12 @@ then
     cd ~/.vagrant-installation
     wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
-    echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
-    echo 'export GOPATH=~/go/bin' >> /home/vagrant/.bash_profile
-    echo 'export PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
+
+    echo 'PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
+    echo 'GOPATH=~/Documents/go' >> /home/vagrant/.bash_profile
+    echo 'export GOPATH' >> /home/vagrant/.bash_profile
+    echo 'PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
+
     /usr/local/go/bin/go get -u -v github.com/nsf/gocode
     /usr/local/go/bin/go get -u -v github.com/rogpeppe/godef
     /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/guru
