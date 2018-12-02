@@ -12,6 +12,7 @@ then
     yum -y install m17n-lib
 
     #Dependencies for X11
+    yum insasll -y nvidia*
     yum install -y xorg-x11-font*
     yum install -y xorg-x11-xauth
     yum install -y xterm

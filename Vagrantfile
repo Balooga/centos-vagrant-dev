@@ -67,6 +67,11 @@ Vagrant.configure("2") do |config|
 
     vb.name = "CentOS 7 Development VM"
   end
+
+  # Enable ssh forwarding
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+
   #
   # View the documentation for the provider you are using for more
   # information on available options.
