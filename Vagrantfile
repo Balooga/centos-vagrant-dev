@@ -50,20 +50,19 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
-  config.ssh.forward_agent = true
-  config.ssh.forward_x11 = true
-
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
+    vb.gui = false
 
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
-    vb.cpus = 1
+    vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
+    vb.customize ["modifyvm", :id, "--vram", "12"]
 
     vb.name = "CentOS 7 Development VM"
   end
@@ -71,8 +70,7 @@ Vagrant.configure("2") do |config|
   # Enable ssh forwarding
   config.ssh.forward_agent = true
   config.ssh.forward_x11 = true
-
-  #
+  
   # View the documentation for the provider you are using for more
   # information on available options.
 
@@ -144,7 +142,7 @@ Vagrant.configure("2") do |config|
   # Download and Install the Atom editor
   config.vm.provision "atom", type: "shell", path: "atom.sh", privileged: false
 
-  #Download and Install Clojure and Leiningen
+  # Download and Install Clojure and Leiningen
   # https://leiningen.org/
   config.vm.provision "lein", type: "shell", path: "lein.sh", privileged: false
 
@@ -164,8 +162,8 @@ Vagrant.configure("2") do |config|
   # Install all C/C++ dependencies
   config.vm.provision "cplusplus", type: "shell", path: "cplusplus.sh"
 
-  config.vm.provision "shell", inline: <<-SHELL
-      systemctl set-default graphical.target
-  SHELL
+  # config.vm.provision "shell", inline: <<-SHELL
+  #     systemctl set-default graphical.target
+  # SHELL
 
 end
