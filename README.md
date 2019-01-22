@@ -46,7 +46,7 @@ Administration privileges to install.
 
 2. Git clone this repository
 
-3. `cd vagrant-centos-7-vm`
+3. `cd centos-vagrant-dev`
 
 4. Enter `vagrant up` at the command-line in the vagrant-centos-7-vm directory
 
