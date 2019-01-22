@@ -13,7 +13,7 @@ then
     echo 'PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
 
     echo 'export GOPATH' >> /home/vagrant/.bash_profile
-    # echo 'PATH' >> /home/vagrant/.bash_profile
+    echo 'export PATH' >> /home/vagrant/.bash_profile
 
     # echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
     # echo 'export GOPATH=~/go/bin' >> /home/vagrant/.bash_profile
