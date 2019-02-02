@@ -22,7 +22,8 @@
 
 ## Overview
 
-This Vagrant script will install Emacs, Spacemacs, and various development environments on a Centos 7.4 Virtual Machine.
+This Vagrant script will install Emacs, Spacemacs, and various development
+environments on a Centos 7.4 Virtual Machine.
 
 ## Dependencies
 
@@ -72,7 +73,8 @@ It is assumed that the `vagrant up` command is executed in a directly under
 `\Users\<user_name>\` for example `\Users\<user_name>\<vagrant-centos-7-vm>`
 directory, as the shared folder is mapped to `\Users\<user_name>\Documents`.
 
-When in the virtual machine, the *Host* folders are accessible from `~/Documents/Documents`.
+When in the virtual machine, the *Host* folders are accessible from
+`~/Documents/Documents`.
 
 ### VM Login Details
 
@@ -80,7 +82,7 @@ Login to the VM as using `vagrant` as both user and password.
 
 ## Vagrant Installed Packages
 
-Vagrant will install the following packages as part of provisioning the VM.
+Vagrant will install the following packages when provisioning the VM.
 
 * X11 - supporting Xming (Windows) and XQuartz (OSX)
 * PlantUML
@@ -125,7 +127,8 @@ menu for the virtual machine and enable copy/paste as follows;
 
 ### Atom Editor
 
-The Vagrant installation script adds support for Markdown and PlantUML to the Atom editor.
+The Vagrant installation script adds support for Markdown and PlantUML to the
+Atom editor.
 
 1. The following Atom packages are installed;
 
