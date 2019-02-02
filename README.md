@@ -32,8 +32,9 @@ Administration privileges to install.
 
 1. VirtualBox (https://www.virtualbox.org)
 
-2. VirtualBox Guest Additions 
-     
+2. VirtualBox Guest Additions (https://github.com/dotless-de/vagrant-vbguest)
+   - `vagrant plugin install vagrant-vbguest`
+    
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
