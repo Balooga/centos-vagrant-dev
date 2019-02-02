@@ -56,6 +56,9 @@ Administration privileges to install.
 
 Enter `vagrant up` at the command-line to start the VM.
 
+Note that the VM is installed without a Window Manager. It is assumed that you
+will X11 in from the Host OS.
+
 ### Shared Folders
 The vagrant virtual machine is configured to share files and folders between the
 *Host* system and the *Guest* system. Documents, configurations, and code must
@@ -79,8 +82,10 @@ Login to the VM as using `vagrant` as both user and password.
 
 Vagrant will install the following packages as part of provisioning the VM.
 
+* X11 - supporting Xming (Windows) and XQuartz (OSX)
 * PlantUML
 * Graphviz
+* Reveal.js
 * Java
 * Maven
 * Atom editor
@@ -88,11 +93,14 @@ Vagrant will install the following packages as part of provisioning the VM.
 * Git
 * Docker
 * LangTool
-* TexLive
+* LaTeX - TexLive
 * Spinx-docker
 * Pandoc
 * Python
 * GoLang
+* Clojure and Leiningen
+* SBCL - Common Lisp (FTW!!!)
+* StumpWM - a Common Lisp window manager
 
 ## Post Installation Configuration
 
