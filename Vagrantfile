@@ -44,11 +44,12 @@ Vagrant.configure("2") do |config|
 
   if Vagrant::Util::Platform.windows? then
     config.vm.synced_folder "..\\", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+    config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   else
     config.vm.synced_folder "~/", "/home/vagrant/Documents", owner: "vagrant", type: "virtualbox"
+    config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   end
 
-  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -61,7 +62,7 @@ Vagrant.configure("2") do |config|
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
     vb.cpus = 2
-    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
+    # vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
     vb.customize ["modifyvm", :id, "--vram", "12"]
 
     vb.name = "CentOS 7 Development VM"
@@ -70,7 +71,7 @@ Vagrant.configure("2") do |config|
   # Enable ssh forwarding
   config.ssh.forward_agent = true
   config.ssh.forward_x11 = true
-  
+
   # View the documentation for the provider you are using for more
   # information on available options.
 
