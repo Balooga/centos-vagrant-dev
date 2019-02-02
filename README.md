@@ -70,7 +70,7 @@ The shared folder is located in the *Guest* system at this location:
 `~/Documents` (`/home/vagrant/Documents`).
 
 It is assumed that the `vagrant up` command is executed in a directly under
-`\Users\<user_name>\` for example `\Users\<user_name>\<vagrant-centos-7-vm>`
+`\Users\<user_name>\` for example `\Users\<user_name>\<centos-vagrant-7-vm>`
 directory, as the shared folder is mapped to `\Users\<user_name>\Documents`.
 
 When in the virtual machine, the *Host* folders are accessible from
