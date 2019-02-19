@@ -17,7 +17,7 @@ then
     # tar xvzf v1.0.0.tar.gz
     # cd stumpwm-1.0.0
     cd stumpwm
-    ln -s ~/.vagrant-installation/stumpwm-contrib ~/.vagrant-installation/stumpwm/contrib 
+    ln -s ~/.vagrant-installation/stumpwm-contrib ~/.vagrant-installation/stumpwm/contrib
 
     curl -O https://beta.quicklisp.org/quicklisp.lisp
 
