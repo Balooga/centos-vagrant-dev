@@ -1,6 +1,8 @@
+#!/bin/bash
+
 if [ ! -d ~/.vagrant-installation/cmatrix ]
 then
-    echo Installing cMatrix
+    echo Installing cmatrix
 	  cd ~/.vagrant-installation/
 	  git clone https://github.com/abishekvashok/cmatrix.git
     cd ~/.vagrant-installation/cmatrix
@@ -9,9 +11,7 @@ then
     #tar xvzf cmatrix-1.2a.tar.gz
     #cd cmatrix-1.2a
 
-    aclocal
-    autoconf
-    automake -a
+    autoreconf -i
     ./configure
     make
     sudo make install
