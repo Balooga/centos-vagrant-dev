@@ -150,7 +150,9 @@ Vagrant.configure("2") do |config|
   #Disable "Tracker" as it sucks down too much CPU
   #config.vm.provision "shell", path: "tracker.sh", privileged: false
 
-  config.vm.provision "stumpwm", type: "shell", path: "stumpwm.sh", privileged: false
+  #config.vm.provision "stumpwm", type: "shell", path: "stumpwm.sh", privileged: false
+
+  config.vm.provision "i3", type: "shell", path: "i3.sh", privileged: false
 
   config.vm.provision "cmatrix", type: "shell", path: "cmatrix.sh", privileged: false
 

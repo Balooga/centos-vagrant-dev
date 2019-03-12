@@ -45,3 +45,10 @@ then
     yum -y install xorg-x11-xauth
     yum -y install xorg-x11-apps.x86_64
 fi
+
+if [ ! -f ~/.vagrant-installation/sbcl.installed ]
+then
+    echo Installing SBCL
+    touch ~/.vagrant-installation/sbcl.installed
+    sudo yum -y install sbcl
+fi

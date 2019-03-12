@@ -1,14 +1,8 @@
 #!/bin/bash
-if [ ! -f ~/.vagrant-installation/sbcl.installed ]
-then
-    echo Installing SBCL
-    touch ~/.vagrant-installation/sbcl.installed
-    sudo yum -y install sbcl
-fi
 
 if [ ! -d ~/.vagrant-installation/stumpwm ]
 then
-    echo Installing StumpWM.
+    echo Installing StumpWM
     cd ~/.vagrant-installation/
 
     git clone https://github.com/stumpwm/stumpwm.git
