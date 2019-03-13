@@ -33,7 +33,7 @@ then
     echo Install various dependencies
 #    mkdir /home/vagrant/.vagrant-installation/deps
     touch /home/vagrant/.vagrant-installation/deps.installed
-    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel
+    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel htop
     yum-builddep -y emacs
 fi
 
