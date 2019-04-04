@@ -140,6 +140,9 @@ Vagrant.configure("2") do |config|
   # Download and Install the Pandoc Documentation Generator
   config.vm.provision "pandoc", type: "shell", path: "pandoc.sh"
 
+  # Download and Install Asciidoc
+  config.vm.provision "pandoc", type: "shell", path: "asciidoc.sh"
+
   # Download and Install the Atom editor
   config.vm.provision "atom", type: "shell", path: "atom.sh", privileged: false
 
@@ -155,6 +158,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "i3", type: "shell", path: "i3.sh", privileged: false
 
   config.vm.provision "cmatrix", type: "shell", path: "cmatrix.sh", privileged: false
+
+  #config.vm.provision "feh", type: "shell", path: "feh.sh", privileged: false
 
   # Download and Install Golang
   config.vm.provision "golang", type: "shell", path: "golang.sh", privileged: false

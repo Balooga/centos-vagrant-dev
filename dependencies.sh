@@ -33,13 +33,14 @@ then
     echo Install various dependencies
 #    mkdir /home/vagrant/.vagrant-installation/deps
     touch /home/vagrant/.vagrant-installation/deps.installed
-    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel htop
+    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel htop conky glances ruby gettext-devel gtk2 gtk2-devel gtkmm24 gtkmm24-devel
     yum-builddep -y emacs
+    gem install taskjuggler
 fi
 
 if [  ! -f /home/vagrant/.vagrant-installation/X11.installed ]
 then
-    echo Installing X11 dependencies 
+    echo Installing X11 dependencies
     #    mkdir /home/vagrant/.vagrant-installation/X11
     touch /home/vagrant/.vagrant-installation/x11.installed
     yum -y install xorg-x11-xauth
@@ -50,5 +51,5 @@ if [ ! -f ~/.vagrant-installation/sbcl.installed ]
 then
     echo Installing SBCL
     touch ~/.vagrant-installation/sbcl.installed
-    sudo yum -y install sbcl
+    yum -y install sbcl
 fi
