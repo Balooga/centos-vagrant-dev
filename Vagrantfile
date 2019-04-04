@@ -141,7 +141,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "pandoc", type: "shell", path: "pandoc.sh"
 
   # Download and Install Asciidoc
-  config.vm.provision "pandoc", type: "shell", path: "asciidoc.sh"
+  config.vm.provision "asciidoc", type: "shell", path: "asciidoc.sh"
 
   # Download and Install the Atom editor
   config.vm.provision "atom", type: "shell", path: "atom.sh", privileged: false
