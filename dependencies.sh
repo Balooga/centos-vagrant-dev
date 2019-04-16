@@ -53,3 +53,11 @@ then
     touch ~/.vagrant-installation/sbcl.installed
     yum -y install sbcl
 fi
+
+if [ ! -f ~/.vagrant-installation/fish.installed ]
+then
+    echo Installing Fish
+    touch ~/.vagrant-installation/fish.installed
+    yum -y install fish
+    # chsh -s /usr/bin/fish
+fi

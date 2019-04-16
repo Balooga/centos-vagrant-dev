@@ -4,7 +4,7 @@ then
     echo Installing Pandoc
     touch /home/vagrant/.vagrant-installation/asciidoc.installed
 
-    yum -y install asciidoc
+    yum -y install asciidoctor
 
     cd ~/
 fi
