@@ -1,15 +1,15 @@
 #!/bin/bash
-if [ ! -d ~/.vagrant-installation/plantuml/ ]
+if [ ! -d /home/vagrant/.vagrant-installation/plantuml/ ]
 then
-    mkdir ~/.vagrant-installation/plantuml
+    mkdir /home/vagrant/.vagrant-installation/plantuml
 fi
 
-if [ ! -f  ~/.vagrant-installation/plantuml/plantuml.jar ]
+if [ ! -f  /home/vagrant/.vagrant-installation/plantuml/plantuml.jar ]
 then
     echo Installing PlantUML.
-    cd ~/.vagrant-installation/plantuml
+    cd /home/vagrant/.vagrant-installation/plantuml
     wget c --progress=dot:giga http://sourceforge.net/projects/plantuml/files/plantuml.jar
-    chmod 755 ~/.vagrant-installation/plantuml/plantuml.jar
-    ln -s ~/.vagrant-installation/plantuml/plantuml.jar ~/.vagrant-installation/plantuml.jar
-    cd ~/
+    chmod 755 /home/vagrant/.vagrant-installation/plantuml/plantuml.jar
+    ln -s /home/vagrant/.vagrant-installation/plantuml/plantuml.jar /home/vagrant/.vagrant-installation/plantuml.jar
+    cd /home/vagrant/
 fi

@@ -1,24 +1,24 @@
 #!/bin/bash
 
-if [ ! -f ~/.vagrant-installation/i3.installed ]
+if [ ! -f /home/vagrant/.vagrant-installation/i3.installed ]
 then
     echo Installing the i3 window manager
-    touch ~/.vagrant-installation/i3.installed
+    touch /home/vagrant/.vagrant-installation/i3.installed
     sudo yum -y install i3
 
-    tee -a ~/.xinitrc <<EOF
+    tee -a /home/vagrant/.xinitrc <<EOF
 exec i3
 EOF
 
-    tee -a ~/.config/i3/config <<EOF
+    tee -a /home/vagrant/.config/i3/config <<EOF
 exec --no-startup-id xrandr --output $(xrandr | grep -w connected | awk -F'[ +]' '{print $1}') --auto
 EOF
 
-    tee -a ~/bin/i3-resize.sh <<EOF
+    tee -a /home/vagrant/bin/i3-resize.sh <<EOF
 xrandr --output $(xrandr | grep -w connected | awk -F'[ +]' '{print $1}') --auto
 EOF
 
-    chmod +x ~/bin/i3-resize.sh
+    chmod +x /home/vagrant/bin/i3-resize.sh
 
-    cd ~/
+    cd /home/vagrant/
 fi

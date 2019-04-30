@@ -8,7 +8,7 @@ then
 
     sudo yum -y install atom.x86_64.rpm
 
-    cd ~/.vagrant-installation/atom
+    cd /home/vagrant/.vagrant-installation/atom
     apm install language-plantuml
     apm install plantuml-preview
     # apm install markdown-writer
@@ -17,5 +17,5 @@ then
     apm install markdown-preview-enhanced
     apm install language-restructuredtext
     apm install rst-preview-pandoc
-    cd ~/
+    cd /home/vagrant/
 fi

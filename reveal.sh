@@ -1,11 +1,11 @@
 #!/bin/bash
-if [ ! -d ~/.vagrant-installation/reveal.js ]
+if [ ! -d /home/vagrant/.vagrant-installation/reveal.js ]
 then
 
     echo Installing Reveal.
-    cd ~/.vagrant-installation/
+    cd /home/vagrant/.vagrant-installation/
     git clone https://github.com/hakimel/reveal.js.git
-    ln -s ~/.vagrant-installation/reveal.js ~/.reveal.js
+    ln -s /home/vagrant/.vagrant-installation/reveal.js /home/vagrant/.reveal.js
 
-    cd ~/
+    cd /home/vagrant/
 fi

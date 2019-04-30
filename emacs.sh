@@ -4,17 +4,17 @@ then
     echo Emacs not found in the current $PATH
     echo Installing Emacs
 
-    if [ ! -d ~/.vagrant-installation/emacs ]
+    if [ ! -d /home/vagrant/.vagrant-installation/emacs ]
     then
-        cd ~/.vagrant-installation
+        cd /home/vagrant/.vagrant-installation
         git clone https://github.com/emacs-mirror/emacs
     fi
 
-    cd ~/.vagrant-installation/emacs
+    cd /home/vagrant/.vagrant-installation/emacs
     git checkout emacs-26
     git pull
     sudo make install
     make clean
-    cd ~/
+    cd /home/vagrant/
     echo Emacs installation complete.
 fi

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ ! -d ~/.vagrant-installation/cmatrix ]
+if [ ! -d /home/vagrant/.vagrant-installation/cmatrix ]
 then
     echo Installing cmatrix
-	  cd ~/.vagrant-installation/
+	  cd /home/vagrant/.vagrant-installation/
 	  git clone https://github.com/abishekvashok/cmatrix.git
-    cd ~/.vagrant-installation/cmatrix
+    cd /home/vagrant/.vagrant-installation/cmatrix
 
     #wget https://www.asty.org/cmatrix/dist/cmatrix-1.2a.tar.gz
     #tar xvzf cmatrix-1.2a.tar.gz
@@ -15,7 +15,7 @@ then
     ./configure
     make
     sudo make install
-    cd ~/
+    cd /home/vagrant/
 
     echo Matrix installation complete.
 fi

@@ -7,5 +7,5 @@ then
 
     yum -y install pandoc
 
-    cd ~/
+    cd /home/vagrant/
 fi

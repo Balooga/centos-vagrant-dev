@@ -4,7 +4,7 @@ then
     echo Installing Golang
     touch /home/vagrant/.vagrant-installation/golang.installed
 
-    cd ~/.vagrant-installation
+    cd /home/vagrant/.vagrant-installation
     wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
 
@@ -29,6 +29,7 @@ then
     /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/gorename
     /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/goimports
     /usr/local/go/bin/go get -u -v github.com/alecthomas/gometalinter
-    ~/go/bin/gometalinter --install --update
-    cd ~/
+    /home/vagrant/go/bin/gometalinter --install --update
+
+    cd /home/vagrant/
 fi
