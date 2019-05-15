@@ -51,7 +51,6 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   end
 
-
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
@@ -99,17 +98,13 @@ Vagrant.configure("2") do |config|
   # Gnome, Development Tools, etc.
   config.vm.provision "dependencies", type: "shell", path: "dependencies.sh"
 
-  # config.vm.provision "gnome", type: "shell", path: "gnome.sh"
+  # Install all C/C++ dependencies
+  config.vm.provision "cplusplus", type: "shell", path: "cplusplus.sh"
 
   config.vm.provision "x11", type: "shell", path: "x11.sh"
 
-  # config.vm.provision "mu4e", type: "shell", path: "mu4e.sh", privileged: false
-
   # Install the latest version of Git
   config.vm.provision "git", type: "shell", path: "git.sh"
-
-  # Download and Install Docker
-  config.vm.provision "docker", type: "shell", path: "docker.sh", privileged: false
 
   # Download, Compile and Install Emacs
   config.vm.provision "emacs", type: "shell", path: "emacs.sh", privileged: false
@@ -130,10 +125,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "reveal", type: "shell", path: "reveal.sh", privileged: false
 
   # Create the texlive.profile file to allow configuration of Texlive
-  config.vm.provision "shell", path: "texlive.prof.sh"
+  # config.vm.provision "shell", path: "texlive.prof.sh"
 
   # Download and Install Texlive
-  config.vm.provision "texlive", type: "shell", path: "texlive.sh"
+  # config.vm.provision "texlive", type: "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator
   config.vm.provision "sphinx", type: "shell", path: "sphinx.sh"
@@ -144,32 +139,40 @@ Vagrant.configure("2") do |config|
   # Download and Install Asciidoc
   config.vm.provision "asciidoc", type: "shell", path: "asciidoc.sh"
 
-  # Download and Install the Atom editor
-  config.vm.provision "atom", type: "shell", path: "atom.sh", privileged: false
-
   # Download and Install Clojure and Leiningen
   # https://leiningen.org/
   config.vm.provision "lein", type: "shell", path: "lein.sh", privileged: false
+
+  config.vm.provision "i3", type: "shell", path: "i3.sh", privileged: false
+
+  config.vm.provision "cmatrix", type: "shell", path: "cmatrix.sh", privileged: false
+
+  # Download and Install Golang
+  config.vm.provision "golang", type: "shell", path: "golang.sh", privileged: false
+
+
+
+
+
+  # config.vm.provision "gnome", type: "shell", path: "gnome.sh"
+
+  # config.vm.provision "mu4e", type: "shell", path: "mu4e.sh", privileged: false
+
+  # Download and Install Docker
+  # config.vm.provision "docker", type: "shell", path: "docker.sh", privileged: false
+
+  # Download and Install the Atom editor
+  # config.vm.provision "atom", type: "shell", path: "atom.sh", privileged: false
 
   #Disable "Tracker" as it sucks down too much CPU
   #config.vm.provision "shell", path: "tracker.sh", privileged: false
 
   #config.vm.provision "stumpwm", type: "shell", path: "stumpwm.sh", privileged: false
 
-  config.vm.provision "i3", type: "shell", path: "i3.sh", privileged: false
-
-  config.vm.provision "cmatrix", type: "shell", path: "cmatrix.sh", privileged: false
-
   #config.vm.provision "feh", type: "shell", path: "feh.sh", privileged: false
-
-  # Download and Install Golang
-  config.vm.provision "golang", type: "shell", path: "golang.sh", privileged: false
 
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
-
-  # Install all C/C++ dependencies
-  config.vm.provision "cplusplus", type: "shell", path: "cplusplus.sh"
 
   # config.vm.provision "shell", inline: <<-SHELL
   #     systemctl set-default graphical.target
