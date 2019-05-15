@@ -6,5 +6,5 @@ then
 
     yum -y install asciidoctor
 
-    cd /home/vagrant/
+    cd ~/
 fi

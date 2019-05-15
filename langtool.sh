@@ -1,10 +1,10 @@
 #!/bin/bash
-if [ ! -d /home/vagrant/.vagrant-installation/languagetool/ ]
+if [ ! -d ~/.vagrant-installation/languagetool/ ]
 then
     echo Installing languagetool...
-    cd /home/vagrant/.vagrant-installation/
+    cd ~/.vagrant-installation/
     git clone --depth 5 https://github.com/languagetool-org/languagetool.git
-    cd /home/vagrant/.vagrant-installation/languagetool
+    cd ~/.vagrant-installation/languagetool
     # mvn clean test
     ./build.sh languagetool-standalone package -DskipTests
 

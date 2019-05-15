@@ -11,5 +11,5 @@ then
     pip install -U setuptools
     pip install sphinxcontrib-plantuml
 
-    cd /home/vagrant/
+    cd ~/
 fi

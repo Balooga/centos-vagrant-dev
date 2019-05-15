@@ -47,17 +47,17 @@ then
     yum -y install xorg-x11-apps.x86_64
 fi
 
-if [ ! -f /home/vagrant/.vagrant-installation/sbcl.installed ]
+if [ ! -f ~/.vagrant-installation/sbcl.installed ]
 then
     echo Installing SBCL
-    touch /home/vagrant/.vagrant-installation/sbcl.installed
+    touch ~/.vagrant-installation/sbcl.installed
     yum -y install sbcl
 fi
 
-if [ ! -f /home/vagrant/.vagrant-installation/fish.installed ]
+if [ ! -f ~/.vagrant-installation/fish.installed ]
 then
     echo Installing Fish
-    touch /home/vagrant/.vagrant-installation/fish.installed
+    touch ~/.vagrant-installation/fish.installed
     yum -y install fish
     # chsh -s /usr/bin/fish
 fi

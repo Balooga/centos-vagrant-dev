@@ -1,12 +1,12 @@
 #!/bin/bash
-if [ ! -d /home/vagrant/.vagrant-installation/dot-emacs/ ]
+if [ ! -d ~/.vagrant-installation/dot-emacs/ ]
 then
-  cd /home/vagrant/.vagrant-installation/
+  cd ~/.vagrant-installation/
   git clone https://github.com/Balooga/dot-emacs.git
 fi
 
-if [ ! -d /home/vagrant/.spacemacs.d/ ]
+if [ ! -d ~/.spacemacs.d/ ]
 then
     echo Linking .spacemacs.d
-    ln -s /home/vagrant/.vagrant-installation/dot-emacs/.spacemacs.d/ /home/vagrant/.spacemacs.d
+    ln -s ~/.vagrant-installation/dot-emacs/.spacemacs.d/ ~/.spacemacs.d
 fi
