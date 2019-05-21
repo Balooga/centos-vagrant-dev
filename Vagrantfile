@@ -62,8 +62,8 @@ Vagrant.configure("2") do |config|
     # Customize the amount of memory on the VM:
     vb.memory = "6144"
     vb.cpus = 2
-    # vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
-    vb.customize ["modifyvm", :id, "--vram", "12"]
+    # vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"] vb.customize
+    ["modifyvm", :id, "--vram", "128"]
 
     vb.name = "CentOS 7 Development VM"
   end
@@ -125,10 +125,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "reveal", type: "shell", path: "reveal.sh", privileged: false
 
   # Create the texlive.profile file to allow configuration of Texlive
-  # config.vm.provision "shell", path: "texlive.prof.sh"
+  config.vm.provision "shell", path: "texlive.prof.sh"
 
   # Download and Install Texlive
-  # config.vm.provision "texlive", type: "shell", path: "texlive.sh"
+  config.vm.provision "texlive", type: "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator
   config.vm.provision "sphinx", type: "shell", path: "sphinx.sh"
