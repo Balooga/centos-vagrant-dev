@@ -125,10 +125,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "reveal", type: "shell", path: "reveal.sh", privileged: false
 
   # Create the texlive.profile file to allow configuration of Texlive
-  # config.vm.provision "shell", path: "texlive.prof.sh"
+  config.vm.provision "shell", path: "texlive.prof.sh"
 
   # Download and Install Texlive
-  # config.vm.provision "texlive", type: "shell", path: "texlive.sh"
+  config.vm.provision "texlive", type: "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator
   config.vm.provision "sphinx", type: "shell", path: "sphinx.sh"
@@ -149,10 +149,6 @@ Vagrant.configure("2") do |config|
 
   # Download and Install Golang
   config.vm.provision "golang", type: "shell", path: "golang.sh", privileged: false
-
-
-
-
 
   # config.vm.provision "gnome", type: "shell", path: "gnome.sh"
 
