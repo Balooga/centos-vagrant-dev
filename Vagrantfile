@@ -63,7 +63,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "6144"
     vb.cpus = 2
     # vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80"]
-    vb.customize ["modifyvm", :id, "--vram", "12"]
+    vb.customize ["modifyvm", :id, "--vram", "128"]
 
     vb.name = "CentOS 7 Development VM"
   end
