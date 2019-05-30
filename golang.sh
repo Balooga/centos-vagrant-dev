@@ -41,6 +41,7 @@ then
     /usr/local/go/bin/go get -u -v gopkg.in/check.v1
     /usr/local/go/bin/go get -u -v github.com/kisielk/errcheck
     /usr/local/go/bin/go get -u golang.org/x/lint/golint
+    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/gopls
 
     /usr/local/go/bin/go get -u -v github.com/godoctor/godoctor
     /usr/local/go/bin/go install github.com/godoctor/godoctor
