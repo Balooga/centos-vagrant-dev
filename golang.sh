@@ -8,44 +8,40 @@ then
     wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
 
-    echo 'PATH=$PATH:/usr/local/go/bin:~/go/bin' >> /home/vagrant/.bash_profile
-    echo 'GOPATH=~/Documents/go' >> /home/vagrant/.bash_profile
-    echo 'PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
+    echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
+    echo 'export GOPATH=~/Documents/go' >> /home/vagrant/.bash_profile
+    echo 'export PATH=$PATH:${GOPATH//://bin:}/bin' >> /home/vagrant/.bash_profile
 
-    echo 'export GOPATH' >> /home/vagrant/.bash_profile
-    echo 'export PATH' >> /home/vagrant/.bash_profile
+    export PATH=$PATH:/usr/local/go/bin >> /home/vagrant/.bash_profile
+    export GOPATH=~/Documents/go >> /home/vagrant/.bash_profile
+    export PATH=$PATH:${GOPATH//://bin:}/bin >> /home/vagrant/.bash_profile
 
-    # echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
-    # echo 'export GOPATH=~/go/bin' >> /home/vagrant/.bash_profile
-    # echo 'export PATH=$PATH:$GOPATH' >> /home/vagrant/.bash_profile
+    go get -u -v github.com/nsf/gocode
+    go get -u -v github.com/rogpeppe/godef
+    go get -u -v golang.org/x/tools/cmd/guru
+    go get -u -v golang.org/x/tools/cmd/gorename
+    go get -u -v golang.org/x/tools/cmd/goimports
+    go get -u -v github.com/golangci/golangci-lint/cmd/golangci-lint
+    go get -u -v golang.org/x/tools/cmd/godoc
+    go get -u -v github.com/zmb3/gogetdoc
+    go get -u -v github.com/cweill/gotests/...
+    go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs
+    go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
+    go get -u -v github.com/josharian/impl
+    go get -u -v github.com/fatih/gomodifytags
+    go get -u -v github.com/mdempsky/unconvert
+    go get -u -v gopkg.in/check.v1
+    go get -u -v github.com/kisielk/errcheck
+    go get -u -v golang.org/x/lint/golint
+    go get -u -v golang.org/x/tools/cmd/gopls
 
-    # echo 'export PATH=$PATH:/usr/local/go/bin'
-    # echo 'export GOPATH=~/go/bin'
-    # echo 'export PATH=$PATH:$GOPATH'
+    go get -u -v github.com/godoctor/godoctor
+    go install github.com/godoctor/godoctor
 
-    /usr/local/go/bin/go get -u -v github.com/nsf/gocode
-    /usr/local/go/bin/go get -u -v github.com/rogpeppe/godef
-    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/guru
-    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/gorename
-    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/goimports
-    # /usr/local/go/bin/go get -u -v github.com/alecthomas/gometalinter
-    /usr/local/go/bin/go get -u -v github.com/golangci/golangci-lint/cmd/golangci-lint
-    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/godoc
-    /usr/local/go/bin/go get -u -v github.com/zmb3/gogetdoc
-    /usr/local/go/bin/go get -u -v github.com/cweill/gotests/...
-    /usr/local/go/bin/go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs
-    /usr/local/go/bin/go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
-    /usr/local/go/bin/go get -u -v github.com/josharian/impl
-    /usr/local/go/bin/go get -u -v github.com/fatih/gomodifytags
-    /usr/local/go/bin/go get -u -v github.com/mdempsky/unconvert
-    /usr/local/go/bin/go get -u -v gopkg.in/check.v1
-    /usr/local/go/bin/go get -u -v github.com/kisielk/errcheck
-    /usr/local/go/bin/go get -u golang.org/x/lint/golint
-    /usr/local/go/bin/go get -u -v golang.org/x/tools/cmd/gopls
+    #https://stackoverflow.com/questions/13792254/removing-packages-installed-with-go-get
+    #go list -f {{.Target}} golang.org/x/lint/golint
 
-    /usr/local/go/bin/go get -u -v github.com/godoctor/godoctor
-    /usr/local/go/bin/go install github.com/godoctor/godoctor
+    #go clean -i -n golang.org/x/lint/golint
 
-    ~/go/bin/gometalinter --install --update
     cd ~/
 fi
