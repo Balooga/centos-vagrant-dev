@@ -34,7 +34,13 @@ Administration privileges to install.
 
 2. VirtualBox Guest Additions (https://github.com/dotless-de/vagrant-vbguest)
    - `vagrant plugin install vagrant-vbguest`
-    
+   - Or
+     - Download Latest Guest Additions from(https://download.virtualbox.org/virtualbox)
+     - sudo mkdir /media/VirtualBoxGuestAdditions
+     - sudo mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+     - cd /media/VirtualBoxGuestAdditions
+     - sudo ./VBoxLinuxAdditions.run
+
 2. Git (https://git-for-windows.github.io)
 
 3. Vagrant (https://wwww.vagrantup.com)
