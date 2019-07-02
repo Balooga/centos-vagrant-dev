@@ -170,8 +170,8 @@ Vagrant.configure("2") do |config|
   # Download and Install the latest stable version of the Eclipse IDE
   # config.vm.provision "shell", path: "eclipse.sh", privileged: false
 
-  # config.vm.provision "shell", inline: <<-SHELL
-  #     systemctl set-default graphical.target
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+      systemctl set-default graphical.target
+  SHELL
 
 end

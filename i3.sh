@@ -6,7 +6,8 @@ then
     touch ~/.vagrant-installation/i3.installed
     sudo yum -y install i3 feh dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts i3status lilyterm terminator conky
 
-    systemctl set-default graphical.target
+    # This should be taken care of in the Vagrantfile
+#    systemctl set-default graphical.target
 #    systemctl set-default multi-user.target
 
     tee -a ~/.xinitrc <<EOF
