@@ -9,11 +9,13 @@ then
     sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
 
     echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/vagrant/.bash_profile
-    echo 'export GOPATH=~/Documents/go' >> /home/vagrant/.bash_profile
+    echo 'export GOPATH=~/go' >> /home/vagrant/.bash_profile
+    #echo 'export GOPATH=~/Documents/go' >> /home/vagrant/.bash_profile
     echo 'export PATH=$PATH:${GOPATH//://bin:}/bin' >> /home/vagrant/.bash_profile
 
     export PATH=$PATH:/usr/local/go/bin >> /home/vagrant/.bash_profile
-    export GOPATH=~/Documents/go >> /home/vagrant/.bash_profile
+    export GOPATH=~/go >> /home/vagrant/.bash_profile
+    #export GOPATH=~/Documents/go >> /home/vagrant/.bash_profile
     export PATH=$PATH:${GOPATH//://bin:}/bin >> /home/vagrant/.bash_profile
 
     go get -u -v github.com/nsf/gocode
