@@ -31,7 +31,7 @@ if [  ! -f /home/vagrant/.vagrant-installation/deps.installed ]
 then
     echo Install various dependencies
     touch /home/vagrant/.vagrant-installation/deps.installed
-    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel htop conky glances ruby gettext-devel gtk2 gtk2-devel gtkmm24 gtkmm24-devel global
+    yum -y install yum-utils libacl fortune-mod cowsay graphviz java adobe-source-code-pro-fonts perl-Digest-MD5 maven xterm mlocate lynx SDL SDL-devel htop glances ruby gettext-devel gtk2 gtk2-devel gtkmm24 gtkmm24-devel global firefox
     yum-builddep -y emacs
     gem install taskjuggler
 fi
@@ -56,6 +56,7 @@ then
     echo Installing Fish
     touch /home/vagrant/.vagrant-installation/fish.installed
     yum -y install fish
+
     # Make fish the default shell after installation is completed
     # chsh -s /usr/bin/fish
 fi

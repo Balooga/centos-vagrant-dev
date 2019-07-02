@@ -5,6 +5,10 @@ then
     echo Installing X11 Dependencies
     touch /home/vagrant/.vagrant-installation/X11.installed
 
+    yum install -y dnf dnf-plugins-core
+    dnf config-manager --add-repo https://copr.fedorainfracloud.org/coprs/admiralnemo/i3wm-el7/repo/epel-7/admiralnemo-i3wm-el7-epel-7.repo
+    yum install -y lightdm xorg-x11-xinit-session
+
     # Dependencies for Emacs
     yum -y install gtk3
     yum -y install librsvg2
