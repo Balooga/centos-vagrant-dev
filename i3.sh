@@ -23,7 +23,7 @@ EOF
 xrandr --output \$(xrandr | grep -w connected | awk -F'[ +]' '{print \$1}') --auto
 
 #Add the following to the end of ~/.config/i3/config
-#exec --no-startup-id xrandr --output \$(xrandr | grep -w connected | awk -F'[ +]' '{print \$1}') --auto
+#exec --no-startup-id ~/bin/i3-resize.sh
 #exec --no-startup-id xsetroot -solid "#002244"
 ##exec --no-startup-id conky -c ~/.conkyrc
 
