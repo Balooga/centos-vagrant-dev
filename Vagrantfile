@@ -150,6 +150,9 @@ Vagrant.configure("2") do |config|
   # Download and Install Golang
   config.vm.provision "golang", type: "shell", path: "golang.sh", privileged: false
 
+  # Set $PATH
+  config.vm.provision "paths", type: "shell", path: "paths.sh", privileged: false
+
   # config.vm.provision "gnome", type: "shell", path: "gnome.sh"
 
   # config.vm.provision "mu4e", type: "shell", path: "mu4e.sh", privileged: false

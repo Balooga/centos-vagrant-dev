@@ -47,9 +47,6 @@ then
 
     /usr/local/texlive/2019/bin/x86_64-linux/tlmgr -repository http://mirror.ctan.org/systems/texlive/tlnet install epstopdf
 
-    echo 'export PATH=$PATH:/usr/local/texlive/2019/bin/x86_64-linux' >> /home/vagrant/.bash_profile
-    #echo export PATH >> /home/vagrant/.bash_profile
-
     echo TexLive Installation Complete.
 fi
 
