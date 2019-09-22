@@ -99,7 +99,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "dependencies", type: "shell", path: "dependencies.sh"
 
   # Install all C/C++ dependencies
-  config.vm.provision "cplusplus", type: "shell", path: "cplusplus.sh"
+  #config.vm.provision "cplusplus", type: "shell", path: "cplusplus.sh"
 
   config.vm.provision "x11", type: "shell", path: "x11.sh"
 
@@ -116,32 +116,32 @@ Vagrant.configure("2") do |config|
   config.vm.provision "dot-emacs", type: "shell", path: "dot-emacs.sh", privileged: false
 
   # Download and Install PlantUML
-  config.vm.provision "plantuml", type: "shell", path: "plantuml.sh", privileged: false
+  #config.vm.provision "plantuml", type: "shell", path: "plantuml.sh", privileged: false
 
   # Download, Compile and Install LanguageTool
-  config.vm.provision "langtool", type: "shell", path: "langtool.sh", privileged: false
+  #config.vm.provision "langtool", type: "shell", path: "langtool.sh", privileged: false
 
   # Download and Install Reveal.js
-  config.vm.provision "reveal", type: "shell", path: "reveal.sh", privileged: false
+  #config.vm.provision "reveal", type: "shell", path: "reveal.sh", privileged: false
 
   # Create the texlive.profile file to allow configuration of Texlive
-  config.vm.provision "shell", path: "texlive.prof.sh"
+  #config.vm.provision "shell", path: "texlive.prof.sh"
 
   # Download and Install Texlive
-  config.vm.provision "texlive", type: "shell", path: "texlive.sh"
+  #config.vm.provision "texlive", type: "shell", path: "texlive.sh"
 
   # Download and Install the Sphinx Documentation Generator
-  config.vm.provision "sphinx", type: "shell", path: "sphinx.sh"
+  #config.vm.provision "sphinx", type: "shell", path: "sphinx.sh"
 
   # Download and Install the Pandoc Documentation Generator
-  config.vm.provision "pandoc", type: "shell", path: "pandoc.sh"
+  #config.vm.provision "pandoc", type: "shell", path: "pandoc.sh"
 
   # Download and Install Asciidoc
-  config.vm.provision "asciidoc", type: "shell", path: "asciidoc.sh"
+  #config.vm.provision "asciidoc", type: "shell", path: "asciidoc.sh"
 
   # Download and Install Clojure and Leiningen
   # https://leiningen.org/
-  config.vm.provision "lein", type: "shell", path: "lein.sh", privileged: false
+  #config.vm.provision "lein", type: "shell", path: "lein.sh", privileged: false
 
   config.vm.provision "i3", type: "shell", path: "i3.sh", privileged: false
 
