@@ -35,7 +35,11 @@ Administration privileges to install.
 2. VirtualBox Guest Additions (https://github.com/dotless-de/vagrant-vbguest)
    - `vagrant plugin install vagrant-vbguest`
    - Or
-     - Download Latest Guest Additions from(https://download.virtualbox.org/virtualbox)
+     - Download Latest Guest Additions from
+       (https://download.virtualbox.org/virtualbox)
+     - Remove any existing `vagrant-vbguest` plugin by executing `vagrant plugin
+       uninstall vagrant-vbguest`
+     - Mount the Guest Additions iso into the CDROM drive in VirtualBox
      - sudo mkdir /media/VirtualBoxGuestAdditions
      - sudo mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
      - cd /media/VirtualBoxGuestAdditions
