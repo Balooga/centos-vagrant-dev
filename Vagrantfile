@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "minimal/centos7"
   #config.vm.box = "centos/7"
-  config.vm.box = "bento/centos-7.6"
-  config.vm.box_version = "201907.24.0"
+  config.vm.box = "bento/centos-7.8"
+  config.vm.box_version = "202007.17.0"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
